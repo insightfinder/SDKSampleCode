@@ -1,6 +1,6 @@
 
 # SDKSampleCode[[Documentation](https://docs.google.com/document/d/1ByY8jCDN6e2s2A3IFHWlU_ur-wFMTBgAw3_7qpAKHbg/edit#heading=h.razemzadmvvm)]
-1. Put the sdk jar file under the project directory
+1. Put the **InsightfinderSDK-1.1.jar** file under the project directory
 2. Add dependency into the **pom.xml**
   ```xml
   <dependency>
