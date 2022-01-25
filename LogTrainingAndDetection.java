@@ -20,7 +20,7 @@ public class LogTrainingAndDetection  extends TestBase {
 
   public TrainingModel createUBLModel() {
     String dataCSV = readDataFromFile(trainingDataFile);
-    UBLTrainingParameter ublTrainingParameter = new UBLTrainingParameter(0.95, 3, 10, 64);
+    UBLTrainingParameter ublTrainingParameter = new UBLTrainingParameter(0.95, 3, 10, true);
     MetricTrainingProcessor metricTrainingProcessor = new MetricTrainingProcessor(dataCSV,
         ublTrainingParameter);
     return metricTrainingProcessor.train();
@@ -37,7 +37,7 @@ public class LogTrainingAndDetection  extends TestBase {
     TrainingModel trainingModel = createUBLModel();
     String dataCSV = readDataFromFile(trainingDataFile);
     MetricDetectionParameter metricDetectionParameter = new MetricDetectionParameter(0.95, 1,
-        false);
+        true);
     MetricDetectionProcessor metricDetectionProcessor = new MetricDetectionProcessor(
         dataCSV, trainingModel, metricDetectionParameter);
     List<AnomalyModel> anomalyModelList = metricDetectionProcessor.UBLDetection();

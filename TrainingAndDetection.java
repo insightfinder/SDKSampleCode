@@ -20,7 +20,7 @@ public class TrainingAndDetection extends TestBase {
 
   public TrainingModel createUBLModel() {
     String dataCSV = readDataFromFile(trainingDataFile);
-    UBLTrainingParameter ublTrainingParameter = new UBLTrainingParameter(0.95, 3, 10);
+    UBLTrainingParameter ublTrainingParameter = new UBLTrainingParameter(0.95, 3, 10, false);
     MetricTrainingProcessor metricTrainingProcessor = new MetricTrainingProcessor(dataCSV,
         ublTrainingParameter);
     return metricTrainingProcessor.train();
